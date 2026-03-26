@@ -1,14 +1,50 @@
-Fake Account Detector on Social Media Using Machine Learning
+# Fake Account Detector
 
-This project aims to detect fake social media accounts using machine learning techniques. It uses user data such as followers, friends, posts, and account age to train a model that predicts whether an account is fake or real.
+NLP-based machine learning system to classify fake social media accounts, developed as part of a KSCST-funded research initiative.
 
-Project Structure
+## Problem
 
-- `data/` - Contains the dataset (`fake_accounts.csv`)
-- `scripts/` - Contains the training (`train.py`) and prediction (`predict.py`) scripts
-- `models/` - Saves the trained machine learning model (`fake_acc_model.pkl`)
+Fake accounts on social media platforms undermine trust, spread misinformation, and enable fraud. Manual detection doesn't scale to millions of accounts.
 
-Prerequisites
+## Approach
 
-- Python 3.x
-- Required Python packages: `pandas`, `scikit-learn`
+- Analyzed 10,000+ social media account records
+- Extracted NLP-based features from user bio, post patterns, and account metadata
+- Trained and benchmarked multiple classification models
+- Validated results using precision, recall, and ROC-AUC to handle class imbalance
+
+## Results
+
+| Metric | Score |
+|--------|-------|
+| Accuracy | 84% |
+| Evaluation | Precision, Recall, ROC-AUC |
+| Dataset size | 10,000+ accounts |
+
+## Tech Stack
+
+Python · Scikit-learn · Pandas · NLP · REST APIs
+
+## Project Structure
+
+```
+fake-account-detector/
+├── data/               # Dataset (fake_accounts.csv)
+├── scripts/
+│   ├── train.py        # Model training pipeline
+│   └── predict.py      # Inference script
+└── models/             # Saved model (fake_acc_model.pkl)
+```
+
+## Setup
+
+```bash
+git clone https://github.com/5ushh/fake-account-detector
+cd fake-account-detector
+pip install pandas scikit-learn
+python scripts/train.py
+```
+
+## Background
+
+This project was funded by KSCST (Karnataka State Council for Science and Technology) as part of undergraduate research at New Horizon College of Engineering (2023).
